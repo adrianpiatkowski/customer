@@ -25,9 +25,9 @@ info:
 management:
   endpoints:
     web:
+      cors:
+        allowed-origins: '*'
       exposure:
         include: '*'
-
-
 eureka:
   client: ${eureka-client}
