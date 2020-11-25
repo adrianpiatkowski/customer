@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.awt.*;
 
 
 @RequestMapping(value = "/v1/customer", produces = { MediaType.APPLICATION_JSON_VALUE })

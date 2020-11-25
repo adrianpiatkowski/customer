@@ -11,6 +11,17 @@ spring:
   jpa:
     hibernate:
       ddl-auto: ${customer.datasource.ddl-mode}
+
+# ACTUATOR INFO
+info:
+  app:
+    name: "customer"
+    version: "0.0.1"
+    profile: ${spring.profiles.active}
+  serverInfo:
+    port: ${server.port}
+
+
 management:
   endpoints:
     web:
