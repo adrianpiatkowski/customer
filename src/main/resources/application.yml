@@ -25,8 +25,8 @@ info:
 management:
   endpoints:
     web:
-      cors:
-        allowed-origins: '*'
+#      cors:
+#        allowed-origins: '*'
       exposure:
         include: '*'
 #eureka:
@@ -34,7 +34,7 @@ management:
 
 feign:
   hystrix:
-    enabled: true
+    enabled: false
 
 accounts:
   ribbon:

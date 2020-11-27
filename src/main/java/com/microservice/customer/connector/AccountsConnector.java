@@ -1,6 +1,7 @@
 package com.microservice.customer.connector;
 
 
+import com.microservice.customer.configuration.RibbonConfiguration;
 import com.microservice.customer.connector.response.GetAccountsResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
