@@ -29,9 +29,16 @@ management:
         allowed-origins: '*'
       exposure:
         include: '*'
-eureka:
-  client: ${eureka-client}
+#eureka:
+#  client: ${eureka-client}
 
 feign:
   hystrix:
     enabled: true
+
+accounts:
+  ribbon:
+    eureka:
+      enabled: false
+
+    listOfServers: localhost:9999,localhost:9998

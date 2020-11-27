@@ -46,7 +46,7 @@ public class CustomerController {
                 .customerId(customerDto.getId())
                 .fullName(customerDto.getFirstName() + " " + customerDto.getLastName())
                 .accounts(customerAccounts)
-                .cards(customerCards)
+//                .cards(customerCards)
                 .build();
     }
 }
