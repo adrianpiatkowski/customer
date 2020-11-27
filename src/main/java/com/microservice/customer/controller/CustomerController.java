@@ -4,6 +4,7 @@ package com.microservice.customer.controller;
 import com.microservice.customer.controller.response.GetCustomerProductsResponse;
 import com.microservice.customer.controller.response.GetCustomerResponse;
 import com.microservice.customer.dto.AccountDto;
+import com.microservice.customer.dto.CardDto;
 import com.microservice.customer.dto.CustomerDto;
 import com.microservice.customer.service.CustomerService;
 import com.microservice.customer.service.ProductService;
@@ -39,11 +40,13 @@ public class CustomerController {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST));
 
         List<AccountDto> customerAccounts = productService.findCustomerAccounts(customerId);
+        List<CardDto> customerCards = productService.findCustomerCards(customerId);
 
         return GetCustomerProductsResponse.builder()
                 .customerId(customerDto.getId())
                 .fullName(customerDto.getFirstName() + " " + customerDto.getLastName())
                 .accounts(customerAccounts)
+                .cards(customerCards)
                 .build();
     }
 }

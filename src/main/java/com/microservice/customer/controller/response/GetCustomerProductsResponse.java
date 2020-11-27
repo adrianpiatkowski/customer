@@ -1,6 +1,7 @@
 package com.microservice.customer.controller.response;
 
 import com.microservice.customer.dto.AccountDto;
+import com.microservice.customer.dto.CardDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,4 +17,5 @@ public class GetCustomerProductsResponse {
     private Long customerId;
     private String fullName;
     private List<AccountDto> accounts;
+    private List<CardDto> cards;
 }
